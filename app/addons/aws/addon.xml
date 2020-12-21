@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<addon scheme="4.0">
+    <id>queue</id>
+    <version>1.0.0</version>
+    <priority>1000000</priority>
+    <status>active</status>
+
+    <compatibility>
+        <core_version>
+            <min>4.11.5</min>
+        </core_version>
+        <php_version>
+            <min>7.4.0</min>
+        </php_version>
+    </compatibility>
+
+    <autoload>
+        <psr4 prefix="Tygh\Addons\Aws\">src</psr4>
+    </autoload>
+
+    <bootstrap>\Tygh\Addons\Aws\Bootstrap</bootstrap>
+
+    <settings>
+        <sections>
+            <section id="general">
+                <items>
+                    <item id="region">
+                        <type>selectbox</type>
+                        <default_value>eu-central-1</default_value>
+                        <name>AWS Region</name>
+                        <variants>
+                            <item id="af-south-1">Africa (Cape Town)</item>
+                            <item id="ap-east-1">Asia Pacific (Hong Kong)</item>
+                            <item id="ap-northeast-1">Asia Pacific (Tokyo)</item>
+                            <item id="ap-northeast-2">Asia Pacific (Seoul)</item>
+                            <item id="ap-northeast-3">Asia Pacific (Osaka-Local)</item>
+                            <item id="ap-southeast-1">Asia Pacific (Singapore)</item>
+                            <item id="ap-southeast-2">Asia Pacific (Sydney)</item>
+                            <item id="ap-south-1">Asia Pacific (Mumbai)</item>
+                            <item id="ca-central-1">Canada (Central)</item>
+                            <item id="eu-central-1">Europe (Frankfurt)</item>
+                            <item id="eu-north-1">Europe (Stockholm)</item>
+                            <item id="eu-south-1">Europe (Milan)</item>
+                            <item id="eu-west-1">Europe (Ireland)</item>
+                            <item id="eu-west-2">Europe (London)</item>
+                            <item id="eu-west-3">Europe (Paris)</item>
+                            <item id="me-south-1">Middle East (Bahrain)</item>
+                            <item id="sa-east-1">South America (São Paulo)</item>
+                            <item id="us-east-1">US East (N. Virginia)</item>
+                            <item id="us-east-2">US East (Ohio)</item>
+                            <item id="us-west-1">US West (N. California)</item>
+                            <item id="us-west-2">US West (Oregon)</item>
+                        </variants>
+                    </item>
+                    <item id="account_id">
+                        <name>Account ID (not required)</name>
+                        <type>input</type>
+                        <default_value />
+                    </item>
+                    <item id="access_key_id">
+                        <name>Access key ID (not required)</name>
+                        <type>input</type>
+                        <default_value />
+                    </item>
+                    <item id="secret_access_key">
+                        <name>Secret access key (not required)</name>
+                        <type>input</type>
+                        <default_value />
+                    </item>
+                </items>
+            </section>
+        </sections>
+    </settings>
+</addon>
